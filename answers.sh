@@ -42,3 +42,23 @@ DELETE FROM students
 WHERE name like "Layal";
 
 #4 done
+
+#joins
+
+#1
+
+SELECT employees.Name, companies.Name, companies.Date
+FROM  employees
+INNER JOIN companies on employees.Company = companies.Name;
+
+#2
+
+SELECT employees.Name FROM  employees
+INNER JOIN companies
+ON companies.Name = employees.Company WHERE companies.Date < 2000;
+
+#3
+
+SELECT companies.Name FROM companies
+INNER JOIN employees
+ON companies.Name = employees.Company WHERE employees.Role Like "Graphic Designer";
