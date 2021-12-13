@@ -62,3 +62,26 @@ ON companies.Name = employees.Company WHERE companies.Date < 2000;
 SELECT companies.Name FROM companies
 INNER JOIN employees
 ON companies.Name = employees.Company WHERE employees.Role Like "Graphic Designer";
+
+#count&filet
+
+
+#1
+#select first person with highest points
+SELECT name, max(Points) FROM students;
+#select all person with highest points
+#SELECT Name FROM students WHERE Points=(SELECT max(points) FROM students);
+
+#2
+SELECT avg(Points) FROM students;
+#3
+SELECT COUNT(ID)
+FROM students 
+WHERE Points = 500;
+#4 
+SELECT name FROM students
+WHERE name LIKE '%s%';
+#5
+SELECT name
+FROM students
+ORDER BY points DESC; 
