@@ -15,3 +15,30 @@ SELECT name FROM students WHERE Age = 30 AND Gender like 'F';
 #8 updated
 #9 done
 
+#creating tables
+
+CREATE TABLE "graduates" (
+	"ID"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL UNIQUE,
+	"Age"	INTEGER,
+    "Gender" TEXT,
+    "Points" INTEGER,
+    "Graduation" TEXT,
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
+
+#1
+INSERT INTO graduates (Name,Age,Gender,Points)
+SELECT name,age,gender,points FROM students
+WHERE name like "Layal";
+
+#2
+UPDATE graduates
+SET Graduation = "2018-09-08" 
+WHERE Name like "Layal";
+
+#3
+DELETE FROM students
+WHERE name like "Layal";
+
+#4 done
